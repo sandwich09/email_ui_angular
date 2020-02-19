@@ -1,0 +1,11 @@
+<form >
+        <mat-form-field style="width: 100%;height: 50px;">
+            <mat-icon matPrefix style="margin-right: 5px;">search</mat-icon>
+          <input type="text" style="font-size: 20px;"  placeholder="One/Two/Three" aria-label="Number" matInput [formControl]="myControl" [matAutocomplete]="auto">
+          <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
+            <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+              {{option}}
+            </mat-option>
+          </mat-autocomplete>
+        </mat-form-field>
+</form>

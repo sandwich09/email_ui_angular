@@ -1,0 +1,50 @@
+<mat-sidenav-container>
+        <mat-sidenav-content>
+          <mat-toolbar color="primary" >
+                    <button mat-icon-button>
+                      <mat-icon>apps</mat-icon>
+                    </button>
+            <div fxFlex fxLayout  fxLayoutAlign="flex-start" >MAIL BOX</div>
+            <div fxFlex fxLayout  fxLayoutAlign="center center">
+               <p style="margin-right:25px;margin-top:30px; ">Search</p>
+               <!-- <mat-form-field style="width: 100%;height: 80px;" id="search">
+                    <mat-icon matPrefix>search</mat-icon>
+                    <input matInput type="search"  class="search-input">
+                </mat-form-field> -->
+                <app-auto-complete-test></app-auto-complete-test>
+            </div>
+            <div fxFlex fxLayout  fxLayoutAlign="flex-end">
+              <ul fxLayout fxLayoutGap="10px" class="navigation-items">
+                    <button mat-icon-button id="icon_question">
+                            <mat-icon>question_answer</mat-icon>
+                    </button>
+                <li>
+                        <button mat-icon-button id="icon_settings">
+                                <mat-icon>settings_applications</mat-icon>
+                        </button>
+                </li>
+                <li>
+                        <button mat-icon-button id="icon_help">
+                                <mat-icon>help_outline</mat-icon>
+                        </button>
+                </li>
+                <li>
+                        <button mat-icon-button id="icon_volume">
+                                <mat-icon>volume_mute</mat-icon>
+                        </button>
+                </li>
+                <li>
+                        <button mat-icon-button id="icon_notification">
+                                <mat-icon>notifications</mat-icon>
+                        </button>
+                </li>
+                <li>
+                        <button mat-icon-button id="icon_circle">
+                                <mat-icon>account_circle</mat-icon>
+                        </button>
+                </li>
+              </ul>
+            </div>
+          </mat-toolbar>
+        </mat-sidenav-content>
+ </mat-sidenav-container>

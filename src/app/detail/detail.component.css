@@ -1,0 +1,15 @@
+img {
+    width: 300px;
+    height: 30%;
+}
+.center {
+    margin-top: 220px;
+   
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-align-content: center;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+  }

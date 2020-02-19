@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    
+    position: fixed; 
+    overflow-x: hidden;
+    overflow-y: hidden !important;
+}
+#table {
+    
+    flex: 1 1 auto;
+    width: 100%;
+    position: relative;
+}
+
+.is-active {
+    background-color: red;
+}
+.img-valign {
+    vertical-align: middle;
+    margin-bottom: 0.75em;
+  }
+
+::ng-deep .mat-pseudo-checkbox{
+  display: none !important;
+  color: 
+  #848688 !important;
+
+}
+.mat-button{
+  width: 100%;
+  padding:0px;
+}

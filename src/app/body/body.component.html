@@ -1,0 +1,42 @@
+
+<div class="bodyContain" >
+<div flex="100"  class="navbar">
+                <mat-toolbar fxLayout="row" fxLayoutGap="10" >
+                    <div  fxFlex="25%">
+                    <button mat-icon-button (click)="drawer.toggle()">
+                        <mat-icon>menu</mat-icon>
+                    </button>
+                        <button mat-flat-button color="primary" id="new_message">
+                            New message
+                        </button>
+                    </div>
+                    <div  fxFlex="100%">    
+                        <button mat-button id="mark">
+                            <mat-icon>mail_outline</mat-icon>
+                            Mark all as read
+                        </button>
+                        <button mat-button id="undo">
+                                <mat-icon>undo</mat-icon>
+                               Undo
+                        </button> 
+                    </div>
+                </mat-toolbar>
+</div>
+<mat-drawer-container fxLayout="row" class="detail-container" autosize>
+    <mat-drawer #drawer mode="side" class="exsidenav" opened> 
+        <app-option-navbar></app-option-navbar>
+    </mat-drawer>
+        <div class="detail-sidenav-content">
+        <div class="bodyDetail" >
+            <app-content-inbox></app-content-inbox>
+        </div>
+        <div class="bodyDetail1">
+            <app-detail></app-detail>
+        </div>
+        </div>
+</mat-drawer-container>
+ 
+<mat-divider></mat-divider>
+
+
+</div>

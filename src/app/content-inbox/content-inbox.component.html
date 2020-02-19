@@ -1,0 +1,34 @@
+<div fxLayout="row" fxLayoutAlign="start center" style="width: 510px;">
+
+<input type="checkbox" name="allCheck" [value]="dataEmail" (change)="allCheck($event)" style="margin-left:40px;">
+<h3 matLine fxFlex="40" fxFlexOffset="5" (click)="onAreaListControlChanged(0)" id="inbox"> Inbox </h3>
+<button mat-button [matMenuTriggerFor]="filter" fxFlex="" id="filter">Filter<mat-icon>expand_more</mat-icon></button>
+<mat-menu #filter="matMenu">
+  <button mat-menu-item id="all">All</button>
+  <button mat-menu-item id="unread">Unread</button>
+  <button mat-menu-item id="tome">To me</button>
+  <button mat-menu-item id="flagged">Flagged</button>
+  <button mat-menu-item id="mention">Mentions</button>
+  <button mat-menu-item id="attachments">Attachments</button>
+  <button mat-menu-item id="sort">Sort</button>
+</mat-menu>
+</div>
+<mat-divider></mat-divider>
+<div class="table" style="width: 510px;position: absolute;overflow: auto; height:90%;" >
+    <mat-selection-list>
+        <mat-list-item *ngFor="let data of dataEmail" (click)="onAreaListControlChanged(data.id)">
+            <mat-list-option id="mail_{{data.id}}">
+                    <!-- <mat-list-option id="mail_{{data.id}}" [checkboxPosition]="before"> -->
+                <mat-icon matListIcon> <input type="checkbox" name="dataEmail" [checked]="data.state" (change)="changeCheck($event,data.id)"> </mat-icon>
+                    <h2 matLine> {{data.from.name}} </h2>
+                    <p matLine>
+                        <span> {{data.subject}} </span>
+                        <br>
+                        <span class="body-data" [style.color]="'#848688'">{{data.body}} </span>
+                    </p>
+                <mat-divider></mat-divider>
+            </mat-list-option>
+
+        </mat-list-item>
+    </mat-selection-list>
+</div>
